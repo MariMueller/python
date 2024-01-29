@@ -1,0 +1,277 @@
+print ('Olá, mundo!')
+
+# Mensagens iniciais para o usuário
+print('Olá, mundo!')
+print('Pouzoleindo disse que eu não sei dar um Hello World')
+
+Mensagens são comentários que não aparecem no código
+Mensagens longas: 3 aspas simples 
+
+# Mensagens iniciais para o usuário
+'''
+Mensagens 
+iniciais para o 
+usuário
+'''
+print('Olá, mundo!')
+print('Pouzoleindo disse que eu não sei dar um Hello World')
+
+Variáveis: nomes que damos a valores
+Int: números inteiros
+Float: 1.5, 5.2
+String: 'Isadora' (palavra)
+Bool: True, False
+
+int(input('Digite seu numero: '))
+Converte o float em inteiro
+
+Float: numero = float(input('Digite seu numero float: '))
+Converte o inteiro em float
+
+String: texto
+frase = input('Digite sua frase: ')
+print(frase)
+
+# Operações Matemáticas
+# Soma = +
+# Subtração = -
+# Multiplicação = *
+# Divisão = / 
+# Divisão inteira = //
+
+Subtração/soma/multiplicação
+
+numero1 = int(input('Digite o número 01: '))
+numero2 = int(input('Digite o número 02: '))
+subtrair = numero1-numero2
+print (subtrair)
+
+numero1 = int(input('Digite o número 01: '))
+numero2 = int(input('Digite o número 02: '))
+somar = numero1+numero2
+print (somar)
+
+numero1 = int(input('Digite o número 01: '))
+numero2 = int(input('Digite o número 02: '))
+multiplicacao = numero1*numero2
+print (multiplicacao)
+
+numero1 = int(input('Digite o número 01: '))
+numero2 = int(input('Digite o número 02: '))
+divisao_inteira = numero1//numero2
+print (divisao_inteira)
+
+Divisão sempre dá float! Para gerar int, fazer divisão inteira!
+
+Resto %, incremento (+=) e decremento (-=)
+resto
+>>> 10%3
+
+decremento (diminuir valor)
+valor = 5
+valor -= 1
+print(valor)
+4
+
+incremento (aumentar valor)
+valor = 5
+valor += 1
+print(valor)
+6
+
+Precedência e operadores relacionais
+
+calculo = 2+5*5
+print(calculo) 
+27
+
+* e / vem primeiro
+
+calculo = (2+5)*5
+print(calculo) 
+35
+
+(  ) dá a precedência
+
+# Operadores relacionais
+# == : igual
+# > : maior
+# >= : maior igual
+# < : menor
+# <= : menor igual
+# != : diferente
+
+Podem ser utilizados com frases, strings, números etc.
+
+Formatação de msgs
+
+print (f'A soma dos números digitados é {soma}')
+f na frente do print e abrir aspas simples para inserir textos e variáveis no mesmo print
+
+str.format: saída dos códigos
+
+valor = 45.98475024
+print(f'{valor:.2f}')
+ antes do f, limita o numero de casas decimais que a gente quer printar
+
+print('Olá { }'.format('Mariana'))
+
+nome = 'Mariana'
+print(f'Olá {nome}')
+
+print('Olá {}, você tem {} anos'.format('Mariana',40))
+
+
+print('Olá! Vamos calcular seu salário.')
+
+nome = input('Digite seu nome: ')
+print(nome)
+
+hora = int(input('Digite quantas horas trabalha por dia: '))
+dia = int(input('Digite quantos dias trabalha no mês: '))
+valor = float(input('Digite quanto ganha por hora: '))
+calculo = valor*(hora*dia)
+
+print (f'{nome}, seu salário é de R${calculo}.')
+
+
+def soma(): #definição da função soma
+	calculo = 10+2 #nome diferente da função
+	print(f'O resultado da soma é: {calculo}')
+soma () # chamada da função
+
+def subtracao(): #definição da função subtração
+	sub= 10-2 #nome diferente da função
+	print(f'O resultado da soma é: {calculo}')
+
+subtracao () # chamada da função
+
+Parâmetros
+
+def soma(): #definição da função soma
+	calculo = 10+2 #nome diferente da função
+	print(f'O resultado da soma é: {calculo}')
+soma () # chamada da função
+
+def multiplicacao(): #definição da função mult
+	mult = 10*2 #nome diferente da função
+	print(f'O resultado da multiplicacao é: {mult}')
+
+
+def soma(): # chamada da função
+	num1 = int(input('Digite o primeiro número: '))
+	num2 = int(input('Digite o segundo número: '))
+
+	calculo = num1+num2 
+
+	print(f'O resultado da soma é: {calculo}')
+
+
+
+Sem precisar digitar o número de novo:
+
+def soma(num1,num2): 
+
+	calculo = num1+num2 
+
+	print(f'O resultado da soma é: {calculo}')
+
+def multiplicacao(num1,num2): 
+
+	calculo = num1*num2
+
+	print(f'O resultado da multiplicacao é: {calculo}')
+
+num1 = int(input('Digite o primeiro número: '))
+num2 = int(input('Digite o segundo número: '))
+
+soma(num1,num2)
+multiplicacao(num1,num2)
+
+Manipulacao de arquivos
+
+#open somente para leitura
+
+arquivo_leitura = open(file, "r") #open somente para leitura
+
+#abertura para escrita
+
+arquivo_escrita = open(file, "w") #open somente para escrita
+arquivo_escrita.write ("texto a ser escrito") 
+arquivo_escrita.close() #fechar arquivo
+
+#abertura de arquivos binarios
+
+arquivo_binario = open(file, "wb")
+
+Abrir para leitura:
+
+arquivo_leitura = open(file, "r")
+leitura = arquivo_leitura.read
+print(leitura)
+arquivo_leitura.close() #fechar arquivo
+
+
+Escrita e leitura:
+
+#abertura para escrita
+
+arquivo_escrita = open(file, "w") #open somente para escrita
+arquivo_escrita.write (f'testando leitura') 
+arquivo_escrita.close() #fechar arquivo
+
+arquivo_leitura = open(file, "r")
+leitura = arquivo_leitura.read
+print(leitura)
+arquivo_leitura.close() #fechar arquivo
+
+Tratamento de excessões
+
+def divisao(a,b):
+	resultado = a/b
+	print(resultado)
+divisao(10,2)
+
+# Excessão
+
+def divisao(a,b):
+	try:
+		resultado = a/b
+		print(resultado)
+
+	except ZeroDivisionError:
+	    print("Erro")
+
+divisao(10,0)
+
+Não dará erro se:
+
+def divisao(a,b):
+	try:
+		resultado = a/b
+		print(resultado)
+
+	except ZeroDivisionError:
+	    print("Erro")
+
+divisao(10,2)
+
+Se tentar dividir int e string, dar msg de erro:
+
+def divisao(a,b):
+	try:
+		resultado = a/b
+		print(resultado)
+
+	except ZeroDivisionError:
+	    print("Erro")
+	except TypeError as e:
+		print (f'erro: o tipo da divisão não está correto')
+
+divisao(10,'texto')
+
+Msg de erro com detalhes: 
+
+		print (f'erro: o tipo da divisão não está correto. \n Detalhes: {e}')
+
+\n = pular linha
